@@ -1,6 +1,6 @@
 # Simplified C++ to C Converter
 
-This is a program which converts a simplified version of C++ into a C program which can then be compiled. It was created for a school assignment.
+This is a program which converts a simplified version of C++ into a C program which can then be compiled.
 
 ## Transformation Specifics
 
