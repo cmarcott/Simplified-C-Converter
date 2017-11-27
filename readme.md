@@ -2,24 +2,24 @@
 
 This is a program which converts a simplified version of C++ into a C program which can then be compiled. It was created for a school assignment.
 
-#Program Limitations
+##Program Limitations
 - Must be in Simplified C++ Form
 - 50 variables in a class
 - 75 functions in a class
 - class name of 75 characters
 - function within a class name of 50 characters
 
-#Transformation Specifics
+##Transformation Specifics
 
 **Class to a Struct**
 class A {
-   ---
+   ...
 }
 
 *would become:*
 
 struct A {
-   ---
+   ...
 }
 
 
@@ -55,32 +55,32 @@ constructorA(...);
 **Renaming Methods in the Class**
 
 class A {
-   ---
+   ...
    add(int x) {
-      ---};
+      ...};
 }
 
 class B {
-   ---
+   ...
    add(int y) {
-      ---};
+      ...};
 }
 
 *would become*
 
 struct A {
-   ---
+   ...
 }
 
    Aadd(int x) {
-      ---};
+      ...};
 
 struct B {
-   ---
+   ...
 }
 
    Badd(int y) {
-      ---};
+      ...};
 
 **Class Scope**
 *printf statements are to show what variables can be accessed*
@@ -127,9 +127,9 @@ constructorB(...);
 
 int main() {
 class A myClass;
-   ---
+   ...
    myClass.add(int x, int x);
-   ---
+   ...
 }
 
 *would change to*
@@ -137,7 +137,7 @@ class A myClass;
 int main() {
 struct A myClass;
 constructorA();
-   ---
+   ...
    myClass.Aaddii(int x, int x);
-   ---
+   ...
 }
