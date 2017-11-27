@@ -12,15 +12,19 @@ This is a program which converts a simplified version of C++ into a C program wh
 ##Transformation Specifics
 
 **Class to a Struct**
+```c++
 class A {
    ...
 }
+```
 
 *would become:*
 
+```c
 struct A {
    ...
 }
+```
 
 
 ```c++
