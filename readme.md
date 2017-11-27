@@ -23,6 +23,7 @@ struct A {
 }
 
 
+```c++
 class A {
    int a;
 
@@ -30,9 +31,11 @@ class A {
       return (b+c);
    }
 }
+```
  
 *would be converted to:*
  
+```c
 struct A {
    int a;
    int (*Aaddii)();
@@ -41,19 +44,25 @@ struct A {
    int Aaddii(int b, int c) {
       return (b+c);
    }
+```
 
 
 *If a class is defined as:*
 
+```c++
 class A myAClass;
+```
 
 *then the program will replace it with:*
 
+```c
 struct A myAClass;
 constructorA(...);
+```
 
 **Renaming Methods in the Class**
 
+```c++
 class A {
    ...
    add(int x) {
@@ -65,9 +74,11 @@ class B {
    add(int y) {
       ...};
 }
+```
 
 *would become*
 
+```c
 struct A {
    ...
 }
@@ -81,10 +92,12 @@ struct B {
 
    Badd(int y) {
       ...};
+```
 
 **Class Scope**
 *printf statements are to show what variables can be accessed*
 
+```c++
 int a;
 
 class B {
@@ -101,9 +114,11 @@ class B myB;
 
    myB.add(3);
 }
+```
 
 When this is converted to C the program would look like this:
 
+```c
 int a;
 
 struct B {
@@ -122,18 +137,22 @@ constructorB(...);
 
    myB.Baddi(3);
 }
+```
 
 **Method Overloading**
 
+```c++
 int main() {
 class A myClass;
    ...
    myClass.add(int x, int x);
    ...
 }
+```
 
 *would change to*
 
+```c
 int main() {
 struct A myClass;
 constructorA();
@@ -141,3 +160,4 @@ constructorA();
    myClass.Aaddii(int x, int x);
    ...
 }
+```
