@@ -26,6 +26,8 @@ struct A {
 }
 ```
 
+...
+
 
 ```c++
 class A {
