@@ -1,15 +1,8 @@
-#Simplified C++ to C Converter
+# Simplified C++ to C Converter
 
 This is a program which converts a simplified version of C++ into a C program which can then be compiled. It was created for a school assignment.
 
-##Program Limitations
-- Must be in Simplified C++ Form
-- 50 variables in a class
-- 75 functions in a class
-- class name of 75 characters
-- function within a class name of 50 characters
-
-##Transformation Specifics
+## Transformation Specifics
 
 **Class to a Struct**
 ```c++
@@ -167,3 +160,10 @@ constructorA();
    ...
 }
 ```
+
+## Program Limitations
+- Must be in Simplified C++ Form
+- 50 variables in a class
+- 75 functions in a class
+- class name of 75 characters
+- function within a class name of 50 characters
